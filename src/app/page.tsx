@@ -59,7 +59,7 @@ export default function HomePage() {
               Produtos ao vivo
             </h2>
             <p className="text-slate mt-3 max-w-xl">
-              Onze SaaS em produção, da gastronomia ao varejo, do WhatsApp ao BI conversacional.
+              Doze SaaS em produção, da gastronomia ao varejo, do WhatsApp ao BI conversacional.
             </p>
           </div>
 
