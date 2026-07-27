@@ -11,12 +11,12 @@ export default function HomePage() {
         {/* Intro */}
         <section id="intro" className="relative px-6 md:px-12 lg:px-16 py-16 md:py-24 min-h-[70vh] flex flex-col justify-center">
           <div className="max-w-3xl stagger">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-6">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand mb-6">
               {site.sections[0].num} — Estúdio de software
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
               Software que{' '}
-              <span className="text-rust">roda</span>
+              <span className="text-cyan">roda</span>
               <br />
               em produção.
             </h2>
@@ -26,14 +26,14 @@ export default function HomePage() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#products"
-                className="inline-flex items-center gap-2 bg-ink text-paper px-6 py-3 text-sm font-medium hover:bg-rust transition-colors"
+                className="inline-flex items-center gap-2 bg-ink text-paper px-6 py-3 text-sm font-medium hover:bg-brand transition-colors"
               >
                 Ver produtos
                 <span aria-hidden="true">↓</span>
               </a>
               <a
                 href={`mailto:${site.email}`}
-                className="inline-flex items-center gap-2 border border-cream px-6 py-3 text-sm font-medium hover:border-rust hover:text-rust transition-colors"
+                className="inline-flex items-center gap-2 border border-cream px-6 py-3 text-sm font-medium hover:border-brand hover:text-brand transition-colors"
               >
                 Falar com a gente
               </a>
@@ -52,7 +52,7 @@ export default function HomePage() {
         {/* Products */}
         <section id="products" className="px-6 md:px-12 lg:px-16 py-16 md:py-20 border-t border-cream bg-cream/30">
           <div className="mb-12">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-3">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand mb-3">
               {site.sections[1].num}
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
@@ -73,7 +73,7 @@ export default function HomePage() {
         {/* Craft */}
         <section id="craft" className="px-6 md:px-12 lg:px-16 py-16 md:py-20 border-t border-cream">
           <div className="mb-12">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-3">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand mb-3">
               {site.sections[2].num}
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
@@ -83,7 +83,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 stagger">
             {principles.map((p) => (
-              <div key={p.title} className="border-l-2 border-rust pl-6">
+              <div key={p.title} className="border-l-2 border-brand pl-6">
                 <h3 className="font-display text-lg font-semibold mb-2">{p.title}</h3>
                 <p className="text-sm text-slate leading-relaxed">{p.body}</p>
               </div>
@@ -94,7 +94,7 @@ export default function HomePage() {
         {/* Contact */}
         <section id="contact" className="px-6 md:px-12 lg:px-16 py-16 md:py-24 border-t border-cream bg-ink text-paper">
           <div className="max-w-2xl">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-rust mb-3">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand mb-3">
               {site.sections[3].num}
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -105,7 +105,7 @@ export default function HomePage() {
             </p>
             <a
               href={`mailto:${site.email}`}
-              className="inline-block font-mono text-lg md:text-xl text-rust hover:text-white transition-colors border-b border-rust/40 pb-1"
+              className="inline-block font-mono text-lg md:text-xl text-brand hover:text-white transition-colors border-b border-brand/40 pb-1"
             >
               {site.email}
             </a>

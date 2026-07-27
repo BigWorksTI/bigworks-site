@@ -28,11 +28,12 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
   openGraph: {
     title: 'BigWorks',
-    description: 'Software em produção. SaaS multi-tenant com IA onde faz sentido.',
+    description: 'TI e desenvolvimento de software. SaaS multi-tenant com IA onde faz sentido.',
     url: 'https://site.bigworks.com.br',
     siteName: 'BigWorks',
     locale: 'pt_BR',
     type: 'website',
+    images: [{ url: '/brand/logo-light.jpg', width: 1200, height: 630, alt: 'BigWorks' }],
   },
 };
 

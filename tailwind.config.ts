@@ -5,11 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: '#0e0e0e',
+        ink: '#0a0a0a',
         paper: '#f6f3ec',
         cream: '#ebe6dc',
-        rust: '#d4533b',
-        'rust-dark': '#b8432f',
+        brand: '#9b5de5',
+        'brand-dark': '#7c3aed',
+        cyan: '#5bc0eb',
         slate: '#5c5a55',
       },
       fontFamily: {

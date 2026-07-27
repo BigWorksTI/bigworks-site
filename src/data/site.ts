@@ -1,6 +1,6 @@
 export const site = {
   name: 'BigWorks',
-  tagline: 'Software em produção',
+  tagline: 'TI e desenvolvimento de software',
   description:
     'Estúdio de software brasileiro. Construímos SaaS multi-tenant que rodam em produção — restaurantes, varejo, WhatsApp com IA e ferramentas de nicho.',
   url: 'https://site.bigworks.com.br',

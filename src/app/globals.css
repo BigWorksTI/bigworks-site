@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --sidebar-width: 17rem;
+  --sidebar-width: 18rem;
 }
 
 html {
@@ -15,7 +15,7 @@ body {
 }
 
 ::selection {
-  @apply bg-rust text-white;
+  @apply bg-brand text-white;
 }
 
 .grain {
@@ -33,7 +33,7 @@ body {
 
 .card-vcard::before {
   content: '';
-  @apply absolute top-3 left-3 w-2 h-2 rounded-full bg-rust;
+  @apply absolute top-3 left-3 w-2 h-2 rounded-full bg-brand;
 }
 
 .stagger > * {

@@ -5,22 +5,19 @@ import { site } from '@/data/site';
 export function Sidebar() {
   return (
     <>
-      {/* Desktop sidebar — uCard style */}
       <aside
         className="hidden lg:flex fixed inset-y-0 left-0 z-40 w-[var(--sidebar-width)] flex-col bg-ink text-paper"
       >
         <div className="flex flex-col flex-1 p-8">
           <div className="mb-10">
-            <div
-              className="w-16 h-16 rounded-2xl border border-white/10 flex items-center justify-center mb-6 bg-white/5"
-              aria-hidden="true"
-            >
-              <span className="font-display font-extrabold text-2xl tracking-tighter text-rust">BW</span>
-            </div>
-            <h1 className="font-display text-2xl font-bold tracking-tight leading-none">
-              BigWorks
-            </h1>
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/40 mt-2">
+            <a href="#intro" className="block mb-6">
+              <img
+                src="/brand/logo-dark.png"
+                alt="BigWorks — TI e desenvolvimento de software"
+                className="w-full max-w-[210px] h-auto"
+              />
+            </a>
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/35 leading-relaxed">
               {site.tagline}
             </p>
           </div>
@@ -32,7 +29,7 @@ export function Sidebar() {
                 href={`#${section.id}`}
                 className="group flex items-center gap-3 py-2.5 text-sm text-white/50 hover:text-white transition-colors"
               >
-                <span className="font-mono text-[10px] text-rust/80 group-hover:text-rust">
+                <span className="font-mono text-[10px] text-cyan/80 group-hover:text-cyan">
                   {section.num}
                 </span>
                 <span className="group-hover:translate-x-0.5 transition-transform">
@@ -47,7 +44,7 @@ export function Sidebar() {
             <p>{site.location}</p>
             <a
               href={`mailto:${site.email}`}
-              className="block hover:text-rust transition-colors break-all"
+              className="block hover:text-cyan transition-colors break-all"
             >
               {site.email}
             </a>
@@ -55,7 +52,7 @@ export function Sidebar() {
               href={site.github}
               target="_blank"
               rel="noreferrer"
-              className="block hover:text-rust transition-colors"
+              className="block hover:text-cyan transition-colors"
             >
               GitHub ↗
             </a>
@@ -67,19 +64,19 @@ export function Sidebar() {
         </div>
       </aside>
 
-      {/* Mobile header */}
       <header
-        className="lg:hidden fixed top-0 inset-x-0 z-40 bg-ink text-paper border-b border-white/10 px-4 py-3 flex items-center justify-between"
+        className="lg:hidden fixed top-0 inset-x-0 z-40 bg-ink text-paper border-b border-white/10 px-4 py-2.5 flex items-center justify-between gap-3"
       >
-        <div className="flex items-center gap-3">
-          <span className="font-display font-bold text-lg">BigWorks</span>
-          <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 hidden sm:inline">
-            {site.tagline}
-          </span>
-        </div>
-        <nav className="flex gap-3 text-xs font-mono text-white/50" aria-label="Seções mobile">
+        <a href="#intro" className="shrink-0">
+          <img
+            src="/brand/logo-dark.png"
+            alt="BigWorks"
+            className="h-10 w-auto max-w-[140px] object-contain object-left"
+          />
+        </a>
+        <nav className="flex gap-3 text-xs font-mono text-white/50 shrink-0" aria-label="Seções mobile">
           {site.sections.map((s) => (
-            <a key={s.id} href={`#${s.id}`} className="hover:text-rust transition-colors">
+            <a key={s.id} href={`#${s.id}`} className="hover:text-cyan transition-colors">
               {s.num}
             </a>
           ))}

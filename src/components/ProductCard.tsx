@@ -15,8 +15,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
       rel="noreferrer"
       className={[
         'group card-vcard block p-6 md:p-7 transition-all duration-300',
-        'hover:border-rust/30 hover:shadow-[0_12px_40px_-12px_rgba(212,83,59,0.15)]',
-        product.featured ? 'ring-1 ring-rust/20 bg-white' : '',
+        'hover:border-brand/30 hover:shadow-[0_12px_40px_-12px_rgba(155,93,229,0.12)]',
+        product.featured ? 'ring-1 ring-brand/20 bg-white' : '',
       ].join(' ')}
     >
       <div className="flex items-start gap-4 mb-4">
@@ -37,13 +37,13 @@ export function ProductCard({ product, index }: ProductCardProps) {
         </div>
       </div>
 
-      <h3 className="font-display text-xl font-semibold mb-1 group-hover:text-rust transition-colors">
+      <h3 className="font-display text-xl font-semibold mb-1 group-hover:text-brand transition-colors">
         {product.name}
         {product.locale === 'en' && (
           <span className="ml-2 font-mono text-[9px] uppercase text-slate/40 align-middle">EN</span>
         )}
       </h3>
-      <p className="text-sm text-rust/90 font-medium mb-2">{product.tagline}</p>
+      <p className="text-sm text-brand/90 font-medium mb-2">{product.tagline}</p>
 
       {product.highlight && (
         <p className="text-xs font-mono text-slate/70 mb-2">◆ {product.highlight}</p>
@@ -51,7 +51,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
       <p className="text-sm text-slate leading-relaxed">{product.description}</p>
 
-      <p className="mt-4 font-mono text-xs text-slate/50 group-hover:text-rust transition-colors">
+      <p className="mt-4 font-mono text-xs text-slate/50 group-hover:text-brand transition-colors">
         Abrir produto ↗
       </p>
     </a>
