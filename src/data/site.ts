@@ -135,7 +135,7 @@ export const products: Product[] = [
       'Ordens de serviço, clientes, veículos, financeiro e documentos via Google Drive. Foco em prestadores automotivos.',
     url: 'https://upcontroller.app',
     category: 'Automotivo · SaaS',
-    logo: '/logos/upcontroller.svg',
+    logo: '/logos/upcontroller.jpg',
   },
   {
     id: 'app-marcenaria',
