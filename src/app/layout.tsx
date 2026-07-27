@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   description:
     'Estúdio brasileiro de SaaS: Meu Garçom, BOT BigWorks, Avalie Aí, Minha Foto e mais. Software que roda em produção.',
   metadataBase: new URL('https://site.bigworks.com.br'),
+  icons: { icon: '/favicon.svg' },
   openGraph: {
     title: 'BigWorks',
     description: 'Software em produção. SaaS multi-tenant com IA onde faz sentido.',
