@@ -107,6 +107,37 @@ export const products: Product[] = [
     logo: '/logos/minha-foto.png',
   },
   {
+    id: 'imageup',
+    name: 'ImageUp',
+    tagline: 'Sua imagem, no próximo nível',
+    description:
+      'Otimização e processamento de imagens para web e operação. Pipeline pensado para volume e qualidade.',
+    url: 'https://imageup.vps.bigworks.com.br',
+    category: 'Imagem · SaaS',
+    logo: '/logos/imageup.png',
+  },
+  {
+    id: 'lia',
+    name: 'Lia',
+    tagline: 'Secretária virtual administrativa',
+    description:
+      'NFS-e, clientes, serviços e assinaturas no painel. WhatsApp em linguagem natural como canal principal.',
+    url: 'https://lia.bigworks.com.br',
+    category: 'Admin · WhatsApp',
+    logo: '/logos/lia.png',
+    highlight: 'Linguagem natural',
+  },
+  {
+    id: 'upcontroller',
+    name: 'UpController',
+    tagline: 'Gestão para oficinas mecânicas',
+    description:
+      'Ordens de serviço, clientes, veículos, financeiro e documentos via Google Drive. Foco em prestadores automotivos.',
+    url: 'https://upcontroller.app',
+    category: 'Automotivo · SaaS',
+    logo: '/logos/upcontroller.svg',
+  },
+  {
     id: 'app-marcenaria',
     name: 'App Marcenaria',
     tagline: 'Projeto 3D e pedido de corte',
