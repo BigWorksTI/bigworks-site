@@ -1,6 +1,6 @@
 'use client';
 
-import { site } from '@/data/site';
+import { site, whatsappUrl } from '@/data/site';
 
 export function Sidebar() {
   return (
@@ -13,7 +13,7 @@ export function Sidebar() {
             <a href="#intro" className="block mb-6">
               <img
                 src="/brand/logo-dark.png"
-                alt="BigWorks — TI e desenvolvimento de software"
+                alt="BigWorks, TI e desenvolvimento de software"
                 className="w-full max-w-[210px] h-auto"
               />
             </a>
@@ -43,10 +43,13 @@ export function Sidebar() {
             <p className="font-mono text-[10px] uppercase tracking-widest text-white/25">Local</p>
             <p>{site.location}</p>
             <a
-              href={`mailto:${site.email}`}
-              className="block hover:text-cyan transition-colors break-all"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="block hover:text-cyan transition-colors"
             >
-              {site.email}
+              WhatsApp {site.contactName}
+              <span className="block text-white/35 text-xs mt-0.5">{site.whatsappDisplay}</span>
             </a>
             <a
               href={site.github}

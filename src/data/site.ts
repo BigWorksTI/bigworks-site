@@ -2,9 +2,11 @@ export const site = {
   name: 'BigWorks',
   tagline: 'TI e desenvolvimento de software',
   description:
-    'Estúdio de software brasileiro. Construímos SaaS multi-tenant que rodam em produção — restaurantes, varejo, WhatsApp com IA e ferramentas de nicho.',
+    'Estúdio de software brasileiro. Construímos SaaS multi-tenant em produção: restaurantes, varejo, WhatsApp com IA e ferramentas de nicho.',
   url: 'https://site.bigworks.com.br',
-  email: 'ArthurLehdermann@gmail.com',
+  whatsapp: '5551999276563',
+  whatsappDisplay: '(51) 99927-6563',
+  contactName: 'Tailon',
   location: 'Brasil',
   github: 'https://github.com/BigWorksTI',
   sections: [
@@ -14,6 +16,8 @@ export const site = {
     { id: 'contact', label: 'Contato', num: '04' },
   ],
 };
+
+export const whatsappUrl = `https://wa.me/${site.whatsapp}`;
 
 export type Product = {
   id: string;
@@ -34,7 +38,7 @@ export const products: Product[] = [
     name: 'Meu Garçom',
     tagline: 'Cardápio digital e operação do restaurante',
     description:
-      'QR Code, pedidos em tempo real, monitor de cozinha e multi-tenant — cada restaurante no seu subdomínio.',
+      'QR Code, pedidos em tempo real, monitor de cozinha e multi-tenant. Cada restaurante no seu subdomínio.',
     url: 'https://meugarcom.app',
     category: 'Gastronomia',
     logo: '/logos/meu-garcom.png',
@@ -64,7 +68,7 @@ export const products: Product[] = [
     name: 'Prompt BI',
     tagline: 'Ask your data in plain English',
     description:
-      'Metrics and reports in natural language. No maze of filters — visual answers instantly.',
+      'Metrics and reports in natural language. No maze of filters. Visual answers instantly.',
     url: 'https://www.promptbi.com.br',
     category: 'BI · AI',
     logo: '/logos/prompt-bi.png',
@@ -75,7 +79,7 @@ export const products: Product[] = [
     name: 'BOT BigWorks',
     tagline: 'WhatsApp operacional com IA',
     description:
-      'Pedidos, vendas e OS em linguagem natural. A IA entende — não um menu infinito de opções.',
+      'Pedidos, vendas e OS em linguagem natural. A IA entende o que você pede, sem menu infinito de opções.',
     url: 'https://bot.bigworks.com.br',
     category: 'WhatsApp · IA',
     logo: '/logos/bot-bigworks.png',
@@ -121,7 +125,7 @@ export const principles = [
   },
   {
     title: 'IA com critério',
-    body: 'Inteligência onde resolve — WhatsApp em linguagem natural, BI conversacional — não glitter em todo botão.',
+    body: 'Inteligência onde resolve: WhatsApp em linguagem natural, BI conversacional. Sem glitter em todo botão.',
   },
   {
     title: 'Multi-tenant nativo',
