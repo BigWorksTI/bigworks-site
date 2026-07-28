@@ -139,7 +139,7 @@ export const products: Product[] = [
   },
   {
     id: 'elo',
-    name: 'Elo',
+    name: 'ielos',
     tagline: 'Links, redes e programa ao vivo',
     description:
       'Página de links feita para o Brasil. Bloco ao vivo com contador que vira "no ar" sozinho, cliques rastreados e abre rápido no celular.',
