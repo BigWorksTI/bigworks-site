@@ -138,7 +138,7 @@ export const products: Product[] = [
     logo: '/logos/upcontroller.jpg',
   },
   {
-    id: 'elo',
+    id: 'ielos',
     name: 'ielos',
     tagline: 'Links, redes e programa ao vivo',
     description:
