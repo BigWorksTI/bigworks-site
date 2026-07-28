@@ -94,7 +94,7 @@ export const products: Product[] = [
       'Dashboard operacional, FalaE, Google Avaliações e análise de concorrência com IA.',
     url: 'https://avalieai.com.br',
     category: 'NPS',
-    logo: '/logos/avalie-ai.png',
+    logo: '/logos/avalie-ai-icon.png',
   },
   {
     id: 'minha-foto',
@@ -114,7 +114,7 @@ export const products: Product[] = [
       'Otimização e processamento de imagens para web e operação. Pipeline pensado para volume e qualidade.',
     url: 'https://imageup.vps.bigworks.com.br',
     category: 'Imagem · SaaS',
-    logo: '/logos/imageup.png',
+    logo: '/logos/imageup-icon.png',
   },
   {
     id: 'lia',
