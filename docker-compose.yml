@@ -5,7 +5,7 @@
 # URL: https://site.bigworks.com.br
 
 networks:
-  traefik_public:
+  traefik:
     external: true
 
 services:
@@ -19,7 +19,7 @@ services:
         limits:
           memory: 320m
     networks:
-      - traefik_public
+      - traefik
     healthcheck:
       test:
         [
