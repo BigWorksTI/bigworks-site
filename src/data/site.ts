@@ -153,7 +153,7 @@ export const products: Product[] = [
     tagline: 'Projeto 3D e pedido de corte',
     description:
       'Painéis em 3D, fita de borda, export WhatsApp/CSV. Funciona no celular.',
-    url: 'https://marcenaria.morla.com.br',
+    url: 'https://marcenaria.staging.bigworks.com.br',
     category: 'Marcenaria',
     logo: '/logos/app-marcenaria.svg',
   },
