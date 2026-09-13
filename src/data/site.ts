@@ -4,9 +4,9 @@ export const site = {
   description:
     'Estúdio de software brasileiro. Construímos SaaS multi-tenant em produção: restaurantes, varejo, WhatsApp com IA e ferramentas de nicho.',
   url: 'https://site.bigworks.com.br',
-  whatsapp: '5551999276563',
-  whatsappDisplay: '(51) 99927-6563',
-  contactName: 'Tailon',
+  whatsapp: '5548998386116',
+  whatsappDisplay: '(48) 99838-6116',
+  contactName: 'BigWorks',
   location: 'Brasil',
   github: 'https://github.com/BigWorksTI',
   sections: [
