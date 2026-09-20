@@ -54,7 +54,7 @@ Contrato do index.html: cada regiao vira uma classe CSS com o mesmo id.
 | [t3: 04 // CONTATO]                                                          |
 | [h2: Vamos conversar?]                                                       |
 | [t1: Produto novo, integracao com um dos nossos SaaS ou consultoria.]        |
-| [btn: [ico:whatsapp] (51) 99927-6563]  [t2: WhatsApp - Tailon]               |
+| [btn: [ico:whatsapp] (48) 99838-6116]  [t2: WhatsApp - BigWorks]               |
 | [lnk: github.com/BigWorksTI]                                                 |
 +------------------------------------------------------------------------------+
 | footer                                                                       |
