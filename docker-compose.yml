@@ -1,8 +1,8 @@
-# Deploy (Stage, opcional):
+# Deploy (Stage; e daqui que site.bigworks.com.br e servido, via Traefik):
 #   docker compose -p bigworks-site up -d --build
 #
 # Traefik: rota `bigworks-site-web` em /root/traefik/dynamic.yml
-# Producao real e a Vercel (site.bigworks.com.br).
+# O Traefik aponta para bigworks_site_web:3000.
 
 networks:
   traefik:
@@ -21,7 +21,7 @@ services:
     networks:
       - traefik
     healthcheck:
-      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000/"]
       interval: 30s
       timeout: 5s
       retries: 3

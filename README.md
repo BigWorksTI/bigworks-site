@@ -3,7 +3,12 @@
 Site institucional da BigWorks. HTML, CSS e JS puros: sem framework, sem
 build, sem `node_modules`. Abre com `index.html` e funciona.
 
-**Produção:** https://site.bigworks.com.br (Vercel, deploy a cada push em `main`)
+**Produção:** https://site.bigworks.com.br, servido pela Stage (container
+`bigworks_site_web`, rota `bigworks-site-web` no Traefik). Deploy:
+
+```bash
+cd /root/bigworks-site && git pull && docker compose -p bigworks-site up -d --build
+```
 
 ## Estrutura
 
@@ -35,7 +40,7 @@ Qualquer servidor estático serve:
 python3 -m http.server 8080
 ```
 
-Ou o container nginx (Stage): `docker compose -p bigworks-site up -d --build`.
+Ou o mesmo container nginx do deploy (porta 3000).
 
 ## Screenshot de conferência
 
@@ -44,7 +49,7 @@ docker run --rm -v "$PWD":/site:ro -v /tmp/out:/out mcr.microsoft.com/playwright
   npx -y playwright@1.48.0 screenshot --viewport-size=1440,900 --full-page file:///site/index.html /out/site.png
 ```
 
-## Deploy (Vercel)
+## Vercel
 
-Projeto `bigworks-site`, framework "Other" (definido em `vercel.json`),
-sem build. Domínio: `site.bigworks.com.br`.
+`vercel.json` fica no repo (framework "Other", sem build) caso o site volte
+para a Vercel; hoje o DNS aponta para a Stage.
