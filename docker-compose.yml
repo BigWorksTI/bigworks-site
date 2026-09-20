@@ -1,8 +1,8 @@
-# Deploy:
+# Deploy (Stage, opcional):
 #   docker compose -p bigworks-site up -d --build
 #
 # Traefik: rota `bigworks-site-web` em /root/traefik/dynamic.yml
-# URL: https://site.bigworks.com.br
+# Producao real e a Vercel (site.bigworks.com.br).
 
 networks:
   traefik:
@@ -17,18 +17,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 320m
+          memory: 64m
     networks:
       - traefik
     healthcheck:
-      test:
-        [
-          "CMD",
-          "node",
-          "-e",
-          "fetch('http://127.0.0.1:3000').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
-        ]
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 25s
