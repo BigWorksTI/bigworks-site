@@ -1,0 +1,73 @@
+site.bigworks.com.br - wireframe tipado (to-wireframe format=ascii brief=...)
+Contrato do index.html: cada regiao vira uma classe CSS com o mesmo id.
+
++------------------------------------------------------------------------------+
+| nav                                                                          |
+| [ico:logo] [t1: BigWorks]   [lnk: Produtos] [lnk: Como fazemos] [lnk: Contato]|
+|                                                    [btn: [ico:whatsapp] Falar]|
++------------------------------------------------------------------------------+
+| hero                                                                         |
+| [t3: ESTUDIO DE SOFTWARE  //  BRASIL]                                        |
+| [h1: Software que roda]                          +-------------------------+ |
+| [h1: em producao.]                               | board                   | |
+| [t1: Construimos SaaS multi-tenant que ja tem    | [t3: status  //  agora] | |
+|      cliente, deploy e suporte. Restaurantes,    | +---------------------+ | |
+|      varejo, WhatsApp com IA, BI conversacional.]| | row                 | | |
+| [btn: Ver produtos] [btn2: Chamar no WhatsApp]   | | [ico:dot] [t2: Meu  | | |
+| [t3: 9 produtos no ar  |  Laravel  |  Next.js    | |  Garcom] [t3: no ar]| | |
+|      |  Docker  |  Traefik  |  PostgreSQL]       | +---------------------+ | |
+|                                                  | | row (x9)            | | |
+| [img: campo de pixels do logo, fundo]            | +---------------------+ | |
+|                                                  | [t3: log de deploy ...] | |
+|                                                  +-------------------------+ |
++------------------------------------------------------------------------------+
+| ticker                                                                       |
+| [t3: MULTI-TENANT * IA COM CRITERIO * WHATSAPP * PIX * DOCKER * ... (loop)]  |
++------------------------------------------------------------------------------+
+| products                                                                     |
+| [t3: 02 // PRODUTOS]                                                         |
+| [h2: Nove produtos. Todos no ar.]                                            |
+| [t1: Da gastronomia ao varejo, do WhatsApp ao BI. Cada um com cliente real.] |
+| [btn3: Todos] [btn3: Gastronomia] [btn3: WhatsApp e IA] [btn3: Varejo] ...   |
+| +----------------------------------+ +----------------------+ +------------+ |
+| | card (destaque)                  | | card2                | | card2      | |
+| | [img:logo] [t3: WHATSAPP // IA]  | | [img:logo] [t3: cat] | | ...        | |
+| | [h3: BOT BigWorks]               | | [h3: Meu Garcom]     | |            | |
+| | [t1: tagline]                    | | [t1: tagline]        | |            | |
+| | [t2: descricao]                  | | [t2: descricao]      | |            | |
+| | [ico:dot] [t3: no ar] [lnk: abrir]| | [ico:dot] [lnk: ->] | |            | |
+| +----------------------------------+ +----------------------+ +------------+ |
+| | card2 (x6)                                                               | |
++------------------------------------------------------------------------------+
+| craft                                                                        |
+| [t3: 03 // COMO FAZEMOS]                                                     |
+| [h2: Producao primeiro.]                                                     |
+| +------------------------+ +------------------------+ +--------------------+ |
+| | card3                  | | card3                  | | card3              | |
+| | [h3: 01]               | | [h3: 02]               | | [h3: 03]           | |
+| | [h3: Producao primeiro]| | [h3: IA com criterio]  | | [h3: Multi-tenant] | |
+| | [t2: texto]            | | [t2: texto]            | | [t2: texto]        | |
+| +------------------------+ +------------------------+ +--------------------+ |
+| [t3: STACK] [t2: Laravel] [t2: Next.js] [t2: PostgreSQL] [t2: Redis] ...     |
++------------------------------------------------------------------------------+
+| contact                                                                      |
+| [t3: 04 // CONTATO]                                                          |
+| [h2: Vamos conversar?]                                                       |
+| [t1: Produto novo, integracao com um dos nossos SaaS ou consultoria.]        |
+| [btn: [ico:whatsapp] (48) 99838-6116]  [t2: WhatsApp - BigWorks]               |
+| [lnk: github.com/BigWorksTI]                                                 |
++------------------------------------------------------------------------------+
+| footer                                                                       |
+| [ico:logo] [t3: BigWorks - TI e desenvolvimento de software - Brasil]        |
+| [t3: (c) 2026]                                            [lnk: topo]        |
++------------------------------------------------------------------------------+
+
+Plano de implementacao
+
+| Regiao / elemento                 | Etapa | Tecnica                                    |
+|-----------------------------------|-------|--------------------------------------------|
+| Fundo escuro + campo de pixels    | 2     | CSS: gradientes radiais + grid de quadrados |
+| nav, hero, board, ticker          | 3     | HTML/CSS; Syne 800 + DM Sans + JetBrains   |
+| cards de produto, craft, contato  | 3     | HTML/CSS; logos existentes em assets/logos |
+| Icones (whatsapp, seta, dot)      | 4     | SVG inline; sem gerador de imagem          |
+| Revisao integrada                 | 5     | screenshot em Chromium (container)         |
