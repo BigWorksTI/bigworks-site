@@ -1,7 +1,7 @@
 # Deploy (Stage; e daqui que site.bigworks.com.br e servido, via Traefik):
 #   docker compose -p bigworks-site up -d --build
 #
-# Traefik: rota `bigworks-site-web` em /root/traefik/dynamic.yml
+# Traefik: rota `bigworks-site-web` em /opt/projects/traefik/dynamic.yml
 # O Traefik aponta para bigworks_site_web:3000.
 
 networks:
