@@ -327,6 +327,16 @@ h1, h2, h3, p, pre { margin: 0; }
 .open { margin-left: auto; color: var(--ink-2); }
 .card.is-hidden, .card2.is-hidden { display: none; }
 .empty { padding: 32px 0; text-align: center; }
+/* Duas colunas: ícone | texto (BOSS 2026-10-27, como era no Labs). O card-top
+   some do fluxo para o ícone ocupar a coluna da esquerda inteira. */
+.card:not(.card-cta), .card2 {
+  display: grid; grid-template-columns: 46px minmax(0, 1fr);
+  grid-template-rows: auto auto auto 1fr auto; column-gap: 18px;
+}
+.card:not(.card-cta) > *, .card2 > * { grid-column: 2; }
+.card:not(.card-cta) .card-top, .card2 .card-top { display: contents; }
+.card:not(.card-cta) .logo, .card2 .logo { grid-column: 1; grid-row: 1 / span 5; align-self: start; }
+.card:not(.card-cta) .cat, .card2 .cat { text-align: left; margin-bottom: 2px; }
 
 /* craft */
 .craft { border-top: 1px solid var(--line); }
@@ -334,13 +344,16 @@ h1, h2, h3, p, pre { margin: 0; }
 .card3 {
   padding: 28px 26px; border-radius: var(--radius);
   border: 1px solid var(--line); background: var(--surface);
-  display: flex; flex-direction: column; gap: 10px;
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: start; gap: 10px 18px;
 }
+.card3 > * { grid-column: 2; }
+/* Número | texto. Space Grotesk como os títulos: a Syne esticava o "02". */
 .card3 .num {
-  font-family: var(--font-display); font-weight: 800; font-size: 3rem; line-height: 1; letter-spacing: -0.04em;
+  grid-column: 1; grid-row: 1 / span 2;
+  font-family: var(--font-heading); font-weight: 700; font-size: 3rem; line-height: 1; letter-spacing: -0.04em;
   background: linear-gradient(180deg, var(--purple-bright), rgba(155, 93, 229, 0.15));
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 .stack { margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .stack-list { display: flex; flex-wrap: wrap; gap: 8px; }
