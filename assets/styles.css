@@ -168,9 +168,9 @@ h1, h2, h3, p, pre { margin: 0; }
 .nav.is-scrolled { border-bottom-color: var(--line); background: rgba(11, 10, 16, 0.82); }
 .nav-brand { display: inline-flex; align-items: center; gap: 10px; }
 .wordmark {
-  font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; line-height: 1;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.03em; line-height: 1;
 }
-.wordmark b { color: var(--purple-bright); font-weight: 800; }
+.wordmark b { color: var(--purple-bright); font-weight: 700; }
 .wordmark em { color: var(--cyan); font-style: normal; }
 /* o motivo de pixels do logo, reconstruido em CSS */
 .pix { position: relative; width: 22px; height: 22px; display: inline-block; }
