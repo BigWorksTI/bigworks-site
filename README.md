@@ -4,11 +4,18 @@ Site institucional da BigWorks. HTML, CSS e JS puros: sem framework, sem
 build, sem `node_modules`. Abre com `index.html` e funciona.
 
 **Produção:** https://site.bigworks.com.br, servido pela Stage (container
-`bigworks_site_web`, rota `bigworks-site-web` no Traefik). Deploy:
+`bigworks_site_web` na rede externa `traefik`, rota `bigworks-site-web`).
+O nginx do container escuta na porta **3000** (a que o Traefik da Stage
+espera). Deploy no host da Stage, no diretório do clone do projeto:
 
 ```bash
-cd /root/bigworks-site && git pull && docker compose -p bigworks-site up -d --build
+git pull
+docker compose -p bigworks-site up -d --build
 ```
+
+O caminho do clone no host e o arquivo dynamic do Traefik ficam na
+configuração do ambiente (não fixe IP, hostname de provedor nem nome de VPS
+neste README).
 
 ## Estrutura
 
@@ -19,6 +26,10 @@ assets/app.js       reveal on scroll, filtro de produtos, relógio e log do pain
 assets/logos/       logos dos produtos
 assets/brand/       marca, og.png (1200x630)
 docs/wireframe.txt  wireframe tipado: contrato entre regiões e classes CSS
+Dockerfile          nginx:alpine servindo o estático
+nginx.conf          listen 3000; rewrite /logos|/brand → /assets/...
+docker-compose.yml  build + rede externa traefik + healthcheck
+vercel.json         fallback Vercel (framework Other); rewrites /logos e /brand
 ```
 
 Cada região do wireframe (`nav`, `hero`, `board`, `card`, `card2`...) é uma
@@ -31,6 +42,12 @@ Os cards estão escritos direto no `index.html` (seção `products`). Cada card
 tem `data-cat` para o filtro (`gastronomia`, `ia`, `varejo`, `criadores`,
 `servicos`). O painel de status do hero (`board`) lista os mesmos produtos;
 ao adicionar ou remover um, atualize os dois e o número em "Nove produtos".
+
+## Caminhos legados `/logos` e `/brand`
+
+O site antigo servia esses paths na raiz. `nginx.conf` e `vercel.json`
+reescrevem `/logos/*` e `/brand/*` para `/assets/...`, porque outros sites
+ainda apontam para as URLs antigas.
 
 ## Rodar local
 
@@ -53,3 +70,11 @@ docker run --rm -v "$PWD":/site:ro -v /tmp/out:/out mcr.microsoft.com/playwright
 
 `vercel.json` fica no repo (framework "Other", sem build) caso o site volte
 para a Vercel; hoje o DNS aponta para a Stage.
+
+## Decisões vigentes
+
+- **2026-09-20:** sai o Next.js/Tailwind; o site passa a HTML/CSS/JS estático
+  servido por nginx na Stage (DNS de `site.bigworks.com.br` aponta para a
+  Stage; `vercel.json` fica só como fallback).
+- **2026-10:** nginx na porta 3000 (contrato com o Traefik da Stage) e
+  rewrites de `/logos` e `/brand` para `/assets`.
