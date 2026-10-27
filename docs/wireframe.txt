@@ -30,14 +30,14 @@ Contrato do index.html: cada regiao vira uma classe CSS com o mesmo id.
 | [t1: Da gastronomia ao varejo, do WhatsApp ao BI. Cada um com cliente real.] |
 | [btn3: Todos] [btn3: Gastronomia] [btn3: WhatsApp e IA] [btn3: Varejo] ...   |
 | +----------------------------------+ +----------------------+ +------------+ |
-| | card (destaque)                  | | card2                | | card2      | |
+| | card (destaque)                  | | card2 (wide)         | | card2      | |
 | | [img:logo] [t3: WHATSAPP // IA]  | | [img:logo] [t3: cat] | | ...        | |
 | | [h3: BOT BigWorks]               | | [h3: Meu Garcom]     | |            | |
 | | [t1: tagline]                    | | [t1: tagline]        | |            | |
 | | [t2: descricao]                  | | [t2: descricao]      | |            | |
 | | [ico:dot] [t3: no ar] [lnk: abrir]| | [ico:dot] [lnk: ->] | |            | |
 | +----------------------------------+ +----------------------+ +------------+ |
-| | card2 (x6)                                                               | |
+| | card2 (mais 7) + card-cta (proximo / contato)                              |
 +------------------------------------------------------------------------------+
 | craft                                                                        |
 | [t3: 03 // COMO FAZEMOS]                                                     |
@@ -62,12 +62,12 @@ Contrato do index.html: cada regiao vira uma classe CSS com o mesmo id.
 | [t3: (c) 2026]                                            [lnk: topo]        |
 +------------------------------------------------------------------------------+
 
-Plano de implementacao
+Historico (implementado em 2026-09-20; tipografia ajustada em 2026-10)
 
-| Regiao / elemento                 | Etapa | Tecnica                                    |
-|-----------------------------------|-------|--------------------------------------------|
-| Fundo escuro + campo de pixels    | 2     | CSS: gradientes radiais + grid de quadrados |
-| nav, hero, board, ticker          | 3     | HTML/CSS; Syne 800 + DM Sans + JetBrains   |
-| cards de produto, craft, contato  | 3     | HTML/CSS; logos existentes em assets/logos |
-| Icones (whatsapp, seta, dot)      | 4     | SVG inline; sem gerador de imagem          |
-| Revisao integrada                 | 5     | screenshot em Chromium (container)         |
+| Regiao / elemento                 | Nota                                                   |
+|-----------------------------------|--------------------------------------------------------|
+| Fundo escuro + campo de pixels    | CSS: gradientes radiais + grid de quadrados            |
+| nav, hero, board, ticker          | HTML/CSS; Syne 700 + DM Sans + JetBrains Mono          |
+| cards de produto, craft, contato  | HTML/CSS; logos em assets/logos                        |
+| Icones (whatsapp, seta, dot)      | SVG inline; sem gerador de imagem                      |
+| Conferencia visual                | screenshot em Chromium (container Playwright)          |
