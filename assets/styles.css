@@ -23,6 +23,9 @@
 
   /* tipografia */
   --font-display: "Syne", system-ui, sans-serif;
+  /* Títulos: Syne é larga demais em frase longa ("esgaçada", BOSS 2026-10-27);
+     fica só no logo. */
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -71,21 +74,21 @@ h1, h2, h3, p, pre { margin: 0; }
 
 /* ---------- tags tipadas ---------- */
 .h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: clamp(2.6rem, 7vw, 5.4rem);
   line-height: 0.98;
   letter-spacing: -0.035em;
 }
 .h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: clamp(2rem, 4.6vw, 3.4rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
 }
 .h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.35rem;
   line-height: 1.15;
