@@ -78,3 +78,12 @@ para a Vercel; hoje o DNS aponta para a Stage.
   Stage; `vercel.json` fica só como fallback).
 - **2026-10:** nginx na porta 3000 (contrato com o Traefik da Stage) e
   rewrites de `/logos` e `/brand` para `/assets`.
+
+## Imagem de compartilhamento
+
+`assets/brand/og.png` (1200x630) é a prévia que WhatsApp, LinkedIn e afins
+mostram ao compartilhar o link. A fonte é `assets/og/og.html`, no mesmo padrão
+da imagem do BigWorks Labs; texto ou produtos novos pedem regerar a imagem
+renderizando esse HTML em 1200x630 (Chromium headless em container, por exemplo
+`zenika/alpine-chrome:with-puppeteer`). Ao trocar a imagem, mude o `?v=` da URL
+em `og:image` no `index.html` para o WhatsApp não reaproveitar a prévia antiga.
