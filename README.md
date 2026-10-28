@@ -28,7 +28,7 @@ assets/brand/       marca, og.png (1200x630)
 docs/wireframe.txt  wireframe tipado: contrato entre regiões e classes CSS
 Dockerfile          nginx:alpine servindo o estático
 nginx.conf          listen 3000; rewrite /logos|/brand → /assets/...
-docker-compose.yml  build + rede externa traefik + healthcheck
+compose.yml  build + rede externa traefik + healthcheck
 vercel.json         fallback Vercel (framework Other); rewrites /logos e /brand
 ```
 
