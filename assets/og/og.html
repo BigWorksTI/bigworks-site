@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- Fonte da imagem de compartilhamento (assets/brand/og.png, 1200x630).
+     Regerar: ver README, seção "Imagem de compartilhamento". -->
+<html lang="pt-BR"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0b0a10; --bg-2:#100e18; --ink:#f3f0fa; --ink-3:#7e7891; --cyan:#62cdf6; --purple-bright:#9b5de5; --live:#3ddc97; --line:rgba(255,255,255,.09); }
+  * { margin:0; box-sizing:border-box; }
+  body { width:1200px; height:630px; overflow:hidden; background:var(--bg); color:var(--ink); font-family:"Space Grotesk",sans-serif; position:relative; }
+  .field { position:absolute; inset:0;
+    background: radial-gradient(55% 70% at 85% 25%, rgba(114,68,148,.55), transparent 70%),
+                radial-gradient(40% 50% at 10% 90%, rgba(98,205,246,.16), transparent 70%),
+                linear-gradient(180deg,var(--bg-2),var(--bg)); }
+  .field::before { content:""; position:absolute; inset:0;
+    background-image: linear-gradient(var(--line) 1px,transparent 1px), linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:48px 48px; opacity:.5;
+    -webkit-mask-image: radial-gradient(70% 70% at 75% 35%, #000, transparent 80%); }
+  .wrap { position:relative; height:100%; padding:64px 72px; display:flex; flex-direction:column; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .brand .mark { height:56px; } .brand .word { height:34px; }
+  .labs { font-family:"JetBrains Mono",monospace; font-size:18px; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan);
+    padding:7px 14px; border:1px solid rgba(255,255,255,.18); border-radius:999px; }
+  h1 { font-size:92px; line-height:1; letter-spacing:-.035em; max-width:900px; }
+  .hl { background:linear-gradient(90deg,var(--cyan),var(--purple-bright)); -webkit-background-clip:text; color:transparent; }
+  .foot { display:flex; align-items:center; justify-content:space-between; }
+  .t3 { font-family:"JetBrains Mono",monospace; font-size:20px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); display:flex; align-items:center; gap:12px; }
+  .dot { width:12px; height:12px; border-radius:50%; background:var(--live); }
+  .sep { color:var(--purple-bright); }
+  .apps { display:flex; gap:14px; }
+  .apps img { width:64px; height:64px; padding:8px; border-radius:16px; background:#fff; object-fit:contain; }
+  .eyebrow { margin-bottom:22px; font-size:18px; }
+</style></head>
+<body><div class="field"></div><div class="wrap">
+  <div class="brand"><img class="mark" src="../brand/bigworks-mark.png" alt=""><img class="word" src="../brand/bigworks-wordmark.png" alt="BigWorks"></div>
+  <div><p class="t3 eyebrow"><span class="dot"></span>Estúdio de software <span class="sep">//</span> Brasil</p>
+  <h1>Software que roda<br>em <span class="hl">produção.</span></h1></div>
+  <div class="foot">
+    <span class="t3">9 produtos no ar <span class="sep">//</span> site.bigworks.com.br</span>
+    <div class="apps"><img src="../logos/meu-garcom.png" alt=""><img src="../logos/bot-bigworks.png" alt=""><img src="../logos/avalie-ai-icon.png" alt=""><img src="../logos/prompt-bi.png" alt=""><img src="../logos/minha-foto.png" alt=""></div>
+  </div>
+</div></body></html>
